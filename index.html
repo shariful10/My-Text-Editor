@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Text Editor</title>
+</head>
+<body>
+    <section class="mx-auto py-5 w-11/12 md:w-4/6 bg-blue-300 mt-6 rounded-lg">
+        <!-- ─── Text Editor Heading ─────────────────────────────────────── -->
+        <h1 class="text-3xl text-center font-medium mb-5">My Text Editor</h1>
+        <!-- ─── Editor Container ────────────────────────────────────────── -->
+        <div class="mx-auto mb-3  w-11/12 md:w-5/6 border-2 border-black bg-blue-200 rounded-md">
+            <div class="grid grid-cols-3 p-5 border-b-2 border-black mx-2 md:mx-4 justify-center">
+                <!-- ─── Font Styles ────────────────────────────────────────── -->
+                <div class="flex gap-1 md:gap-4 justify-start">
+                    <button onclick="f1(this)"><i class="fa-solid fa-bold md:mx-2"></i></button>
+                    <button onclick="f2(this)"><i class="fa-solid fa-italic md:mx-2"></i></button>
+                    <button onclick="f3(this)"><i class="fa-solid fa-underline md:mx-2"></i></button>
+                </div>
+                <!-- ─── Text Alignments ────────────────────────────────────────── -->
+                <div class="flex gap-1 md:gap-4 justify-start md:justify-center">
+                    <button onclick="f4(this)"><i class="fa-solid fa-align-left md:mx-2"></i></button>
+                    <button onclick="f5(this)"><i class="fa-solid fa-align-center md:mx-2"></i></button>
+                    <button onclick="f6(this)"><i class="fa-solid fa-align-right md:mx-2"></i></button>
+                    <button onclick="f7(this)"><i class="fa-solid fa-align-justify md:mx-2"></i></button>
+                </div>
+                <!-- ─── Font Size, Weight and Color ────────────────────────────────────────── -->
+                <div class="flex gap-1 md:gap-4 justify-end">
+                    <input onchange="f8(this)" class="w-10 h-10 rounded-lg font-bold bg-blue-200 focus:bg-white"
+                        type="number" min="1" max="100" value="16" id="font-size">
+                    <button onclick="f9(this)" class="font-bold">aA</button>
+                    <button><input type="color" name="" id="btn-color" onchange="f10(this)"></button>
+                </div>
+            </div>
+            <div class="mx-4 text-black">
+                <hr>
+            </div>
+            <!-- ─── Editor Text Field ────────────────────────────────────────── -->
+            <div class="mx-4 mt-2">
+                <textarea class="rounded-md mb-1 w-full h-52 md:h-80 text-black p-4 border-2 border-black focus:outline-none" name=""
+                    id="message-field"></textarea>
+            </div>
+        </div>
+    </section>
+    <!-- ─── Javascript File ─────────────────────────────────────────────────── -->
+    <script src="js/editor.js"></script>
+</body>
+</html>
